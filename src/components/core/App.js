@@ -2,25 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 import PrivateRoute from "./PrivateRoute"
 import PublicRoute from "./PublicRoute"
+import PostsPage from '../pages/posts';
+import { BrowserRouter, Switch } from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+
+    <div className={{ flexGrow: 1 }}>
+    {/* <Grid container xs={12}> */}
+      <main role="main">
+        <Switch>
+          <PublicRoute exact path="/" component={PostsPage} />
+          <PrivateRoute exact path="/posts" component={PostsPage} />
+        </Switch>
+      </main>
+    {/* </Grid> */}
     </div>
+  </BrowserRouter>
   );
 }
 

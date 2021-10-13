@@ -14,7 +14,7 @@ const persistConfig = {
   storage,
   // Whitelist (Save Specific Reducers)
   whitelist: [
-    'global',
+    'global','posts','authentication'
   ],
   // Blacklist (Don't Save Specific Reducers)
   blacklist: [

@@ -10,7 +10,7 @@ export default (state = initState, action) => {
         alert: action.payload,
       }
     }
-    
+
     default:
       return state
   }
