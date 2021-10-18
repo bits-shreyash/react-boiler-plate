@@ -3,7 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchPostList } from '../../../redux/posts/action';
 import PageTemplate from '../../templates/page';
 import Posts from '../../organisms/post'
-
+/**
+ * Method: XYSAAAAA
+ * Description: This component 
+ * @returns 
+ */
 const PostsPage = ()=> {
 
   const dispatch = useDispatch();
